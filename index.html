@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.13.4/dist/css/uikit.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.13.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.13.4/dist/js/uikit-icons.min.js"></script> -->
 </head>
 
 <body>
@@ -40,7 +43,7 @@
 
         </div>
         <div class="pokedex">
-          
+
             <div class="pokedex-cubierta">
                 <div class="parte-arriba">
                     <input type="text" id="pokeName">
@@ -56,25 +59,31 @@
                 <div class="orificio">
                     <div class="orificio-cubierta">
                     </div>
-                </div> 
-                <div class="mostrar-informacion">
-                    <div class="f-r">
-                        <span>Tipo:</span> <span id="tipo"></span>
+                </div>
+                <div class="mostrar-informacion f-r">
+                    <div class="f-c" style=" width:170px;">
+                        <div class="f-r">
+                            <span>Tipo:</span> <span id="tipo"></span>
+                        </div>
+                        <div class="f-r">
+                            <span>HP:</span><span id="hp"></span>
+                        </div>
+                        <div class="f-r">
+                            <span>Attack:</span><span id="ataque"></span>
+                        </div>
+                        <div class="f-r">
+                            <span>Defense:</span><span id="defense"></span>
+                        </div>
+                        <div class="f-r">
+                            <span>Special Attack:</span><span id="special-attack"></span>
+                        </div>
+                        <div class="f-r">
+                            <span>Special Defense:</span><span id="special-defense"></span>
+                        </div>
                     </div>
-                    <div class="f-r">
-                        <span>HP:</span><span id="hp"></span>
-                    </div>
-                    <div class="f-r">
-                        <span>Attack:</span><span id="ataque"></span>
-                    </div>
-                    <div class="f-r">
-                        <span>Defense:</span><span id="defense"></span>
-                    </div>
-                    <div class="f-r">
-                        <span>Special Attack:</span><span id="special-attack"></span>
-                    </div>
-                    <div class="f-r">
-                        <span>Special Defense:</span><span id="special-defense"></span>
+                    <div class="f-c">
+                        <span>Moviemientos:</span>
+                        <div id="movimientos" class="f-c" style="width: 195px; margin-left: 15px;"></div>
                     </div>
                 </div>
                 <div class="botones-azul">
@@ -87,7 +96,7 @@
                     <div class="boton-blue"> 4</div>
                     <div class="boton-blue"> 2</div>
                     <div class="boton-blue"> 7</div>
-                    <div class="boton-blue"> 6</div> 
+                    <div class="boton-blue"> 6</div>
                 </div>
             </div>
             <div class="pokedex-abierto f-c">
@@ -120,7 +129,7 @@
                     <div class="boton-amarillo">
                     </div>
                     <div class="boton-verde">
-                    </div>         
+                    </div>
                     <img src="img/d-pad.png" style="width: 140px; margin-top:22px;" alt="">
                 </div>
             </div>

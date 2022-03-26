@@ -14,6 +14,17 @@ const fetchPokemon = () => {
     }).then((data) => {
         if (data) {
             console.log(data);
+            div = document.createElement('div');
+            document.getElementById('movimientos').appendChild(div);
+            var limite = 0;
+            data.moves.forEach(function (item) {
+                limite++;
+                if(limite < 6) {
+                    if(limite > 1) div.appendChild(document.createElement('br'));
+                    div.innerHTML += item.move.name;
+                }
+            });
+
             document.getElementById("tipo").innerHTML = data.types[0].type.name;
             document.getElementById("hp").innerHTML = data.stats[0].base_stat;
             document.getElementById("ataque").innerHTML = data.stats[1].base_stat;
