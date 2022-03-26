@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script src="app.js"></script>
+    <header>
+        <img src="img/pokemon-logo.png" style="width: 20%;" alt="">
+        <img src="img/podedex-logo.png" style="width: 10%;" alt="">
+    </header>
+    <div class="pokedex-cerrado">
+        <div class="f-r luces" style="height: 120px;">
+            <div style="border-bottom: 3px solid black;">
+                <div class="pokedex-luz-azul">
+                </div>
+            </div>
+            <div class="f-c">
+                <div class="f-r" style="margin-top: 15px;">
+                    <div class="pokedex-luz-rojo">
+                    </div>
+                    <div class="pokedex-luz-amarillo">
+                    </div>
+                    <div class="pokedex-luz-verde">
+                    </div>
+                </div>
+                <div style="height: 72px; border-bottom: 3px solid black;">
+                </div>
+                <div class="diagonal">
+                </div>
+                <div class="cubierta">
+                </div>
+            </div>
+
+        </div>
+        <div class="pokedex">
+          
+            <div class="pokedex-cubierta">
+                <div class="parte-arriba">
+                    <input type="text" id="pokeName">
+                    <button onclick="fetchPokemon()">Buscar</button>
+                </div>
+                <div class="diagonal-cubierta">
+                </div>
+                <div class="boton-cubierta">
+                </div>
+                <div>
+
+                </div>
+                <div class="orificio">
+                    <div class="orificio-cubierta">
+                    </div>
+                </div> 
+                <div class="mostrar-informacion">
+                    <div class="f-r">
+                        <span>Tipo:</span> <span id="tipo"></span>
+                    </div>
+                    <div class="f-r">
+                        <span>HP:</span><span id="hp"></span>
+                    </div>
+                    <div class="f-r">
+                        <span>Attack:</span><span id="ataque"></span>
+                    </div>
+                    <div class="f-r">
+                        <span>Defense:</span><span id="defense"></span>
+                    </div>
+                    <div class="f-r">
+                        <span>Special Attack:</span><span id="special-attack"></span>
+                    </div>
+                    <div class="f-r">
+                        <span>Special Defense:</span><span id="special-defense"></span>
+                    </div>
+                </div>
+                <div class="botones-azul">
+                    <div class="boton-blue"> 1 </div>
+                    <div class="boton-blue"> 3 </div>
+                    <div class="boton-blue"> 5</div>
+                    <div class="boton-blue"> 8</div>
+                </div>
+                <div class="botones-azul-2">
+                    <div class="boton-blue"> 4</div>
+                    <div class="boton-blue"> 2</div>
+                    <div class="boton-blue"> 7</div>
+                    <div class="boton-blue"> 6</div> 
+                </div>
+            </div>
+            <div class="pokedex-abierto f-c">
+                <div class="pantalla-cubierta f-c ">
+                    <div class="f-r" style="margin-top:10px;">
+                        <div class="led-pantalla-roja" style="margin-left: 0px !important;">
+                        </div>
+                        <div class="led-pantalla-roja" style="margin-left: 55px !important;">
+                        </div>
+                    </div>
+                    <div class="pantalla">
+                        <img src="img/pokeball.png" alt="Pokemon" id="pokeImg" width="200px">
+                    </div>
+                    <div class="f-r indicadores-pantalla">
+                        <div class="led-pantalla-roja" style="margin-top: 25px !important;">
+                        </div>
+                        <div class="f-c" style="margin-top: 14px !important;">
+                            <div class="lineas-gris">
+                            </div>
+                            <div class="lineas-gris">
+                            </div>
+                            <div class="lineas-gris">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="f-r j-bt">
+                    <div class="pokedex-luz-negro">
+                    </div>
+                    <div class="boton-amarillo">
+                    </div>
+                    <div class="boton-verde">
+                    </div>         
+                    <img src="img/d-pad.png" style="width: 140px; margin-top:22px;" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

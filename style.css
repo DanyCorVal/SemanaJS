@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Poppins:wght@300;400;500;600&display=swap');
+
+
+body {
+  /* background-color: #a2231d; */
+  font-family: 'Oswald', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-image: url('img/wallpaper.png');
+}
+
+header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.f-r {
+  display: flex;
+  flex-direction: row;
+}
+
+.f-c {
+  display: flex;
+  flex-direction: column;
+}
+
+.j-bt {
+  justify-content:space-between;
+}
+
+.luces {
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  border-radius: 25px 25px 0px 0px;
+  background-color: #a2231d;
+}
+
+.pokedex-cerrado {
+  position: absolute;
+  top: 61%;
+  left: 37%;
+  transform: translate(-50%, -50%);
+}
+
+.pokedex-luces {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.pokedex-luz-azul {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(
+    closest-side at 15px 15px,
+    rgba(255, 255, 255, 0.8) 5%,
+    rgba(0, 110, 255, 0.8) 200%
+  );
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1) inset;
+  border-radius: 50%;
+  position: relative;
+  border: 10px solid gray;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.pokedex-luz-negro {
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(
+    closest-side at 15px 15px,
+    rgba(255, 255, 255, 0.8) 5%,
+    rgba(0, 0, 0, 0.8) 200%
+  );
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 1) inset;
+  border-radius: 50%;
+  position: relative;
+  border: 10px solid gray;
+  margin-left: 10px;
+  margin-top: 45px;
+}
+
+.pokedex-luz-rojo {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(
+    closest-side at 10px 10px,
+    rgba(255, 255, 255, 0.8) 5%,
+    rgba(255, 0, 0, 0.8) 200%
+  );
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1) inset;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 20px;
+}
+
+.pokedex-luz-amarillo {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(
+    closest-side at 10px 10px,
+    rgba(255, 255, 255, 0.8) 5%,
+    rgb(255, 230, 0) 200%
+  );
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1) inset;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 15px;
+}
+
+.pokedex-luz-verde {
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(
+    closest-side at 10px 10px,
+    rgba(255, 255, 255, 0.8) 5%,
+    rgb(6, 202, 32) 200%
+  );
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 1) inset;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 15px;
+}
+
+.pokedex {
+  position: relative;
+  width: 500px;
+  height: 600px;
+  transform-style: preserve-3d;
+  transform: perspective(2000px);
+}
+
+.pokedex:hover {
+  z-index: 1;
+  transform: perspective(2000px);
+}
+
+.pokedex .pokedex-cubierta {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transform-origin: right top;
+  z-index: 1;
+  transition: 1s;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  background-color: #a2231d;
+  transform: rotateY(180deg);
+  border-radius: 25px 0px 25px 25px;
+}
+
+.pokedex .pokedex-cubierta img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pokedex .pokedex-abierto {
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.pokedex-abierto {
+  padding: 10px;
+  background-color: #a2231d;
+  border-bottom: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  height: 100%;
+  width: 100%;
+  border-radius: 0px 0px 25px 25px;
+  display: flex;
+  justify-content: center;
+}
+
+.boton-cubierta {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid #ffdf00;
+  position: absolute;
+  top: 45%;
+  left: 1%;
+}
+
+.orificio {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 90%;
+}
+
+.orificio-cubierta {
+  border: 3px solid black;
+  width: 280px;
+  height: 20px;
+  border-radius: 20px;
+}
+
+.diagonal {
+  width: 96px;
+  height: 47px;
+  border-bottom: 3px solid black;
+  -webkit-transform: translateY(20px) translateX(5px) rotate(-40deg);
+  position: absolute;
+  top: 27px;
+  left: 211px;
+}
+
+.cubierta {
+  width: 182px;
+  height: 274px;
+  position: absolute;
+  top: 58px;
+  left: 315px;
+  border-top: 3px solid black;
+  transform-origin: right top;
+}
+
+.pantalla-cubierta {
+  background-color: #fff;
+  width: 375px;
+  height: 375px;
+  border-radius: 25px 25px 25px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 4px solid gray;
+  border-left: 4px solid gray;
+  border-right: 4px solid gray;
+  margin-top: 10px;
+  margin-left: 26px;
+}
+
+.pantalla {
+  margin-top: 15px;
+  width: 275px;
+  height: 250px;
+  border-radius: 25px;
+  background-color: gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.led-pantalla-roja {
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 0, 0, 0.8) 200%;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 50px;
+}
+
+.indicadores-pantalla {
+  width: 100%;
+  height: 75px;
+  justify-content: space-around;
+}
+
+.lineas-gris {
+  margin-top: 10px;
+  border-bottom: 7px solid black;
+  border-radius: 18%;
+  width: 100px;
+}
+
+.boton-verde {
+  margin-top: 30px;
+  background-color:rgb(6, 202, 32);
+  border-radius: 18%;
+  width: 65px;
+  height: 10px;
+}
+
+.boton-amarillo {
+  margin-top: 30px;
+  background-color:rgb(255, 230, 0);
+  border-radius: 18%;
+  width: 65px;
+  height: 10px;
+}
+
+.parte-arriba {
+  background-color: #a2231d;
+  height: 62px;
+  width: 285px;
+  position: absolute;
+  left: 206px;
+  bottom: 597px;
+  border-top: 3px solid black;
+  border-left: 3px solid black;
+  border-right: 3px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.diagonal-cubierta {
+  position: absolute;
+  left: 175px;
+  bottom: 641px;
+  border-bottom: 3px solid black;
+  -webkit-transform: translateY(20px) translateX(5px) rotate(-40deg);
+  width: 96px;
+  height: 50px;
+  background-color: rgb(128 220 255);
+
+}
+
+input[type=text] {
+ width: 140px;
+ height: 40px;
+ margin-left: 65px;
+ border-radius: 10%;
+ background-color: green;
+ transform: scale(-1, 1);
+ color: #000080;
+ -moz-transform: scale(-1, 1);
+ -webkit-transform: scale(-1, 1);
+ -o-transform: scale(-1, 1);
+ -ms-transform: scale(-1, 1);
+ transform: scale(-1, 1);
+ font-family: 'Oswald', sans-serif;
+}
+
+button {
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-family: 'Oswald', sans-serif;
+  margin-left: 10px ;
+}
+
+input[type=text]::placeholder {
+  color: #fff;
+  opacity: 1;
+  margin-left: 110px;
+}
+
+input[type=text]:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: red;
+}
+
+.mostrar-informacion {
+  position: absolute;
+  width: 366px;
+  height: 250px;
+  border-radius: 10%;
+  background-color: green;
+  left: 55px;
+  bottom: 320px;
+  border: 2px solid;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-family: 'Oswald', sans-serif;
+  /*color: #fff;*/
+}
+
+.mostrar-informacion span {
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.botones-azul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  position: absolute;
+  bottom: 226px;
+  width:433px;
+  height: 100px;
+  left: 21px;
+  text-align: center;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-family: 'Oswald', sans-serif;
+}
+
+.botones-azul-2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items:center;
+  position: absolute;
+  bottom: 170px;
+  width:433px;
+  height: 100px;
+  left: 21px;
+  text-align: center;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  font-family: 'Oswald', sans-serif;
+}
+
+.boton-blue {
+  width: 90px;
+  height: 42px;
+  background-color: rgb(51 51 230);
+  border-radius: 10%;;
+}
